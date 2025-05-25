@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition App</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <h1>Face Recognition App</h1>
+    <div class="controls">
+        <button onclick="showRegisterForm()">Register User</button>
+        <button onclick="startRecognition()">Start Recognition</button>
+        <button onclick="stopRecognition()">Stop Recognition</button>
+    </div>
+    <div id="video-container">
+        <img id="video-feed" src="{{ url_for('video_feed') }}" alt="Video Feed">
+    </div>
+    
+    <div id="register-form" style="display: none;">
+        <label for="username">Enter Username:</label>
+        <input type="text" id="username">
+        <button onclick="registerUser()">Submit</button>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
