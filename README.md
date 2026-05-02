@@ -25,17 +25,32 @@ Webcam input → Face detection (Haar Cascade) → LBPH training → Real-time r
 
 ---
 
-## Project Structure
-├── app.py                              # Flask application entry point
-├── face_recognize.py                   # Registration + recognition logic
-├── create_data.py                      # Manual dataset creation (optional)
-├── haarcascade_frontalface_default.xml # Pre-trained face detector
+AI--Enabled-Face-Recognition-system/
+│
+├── app.py                               # Flask app — routes, webcam stream, API endpoints
+├── face_recognize.py                    # Core logic — registration, LBPH training, recognition
+├── create_data.py                       # Manual dataset creation (optional utility)
+├── check_opencv.py                      # OpenCV installation verifier
+├── haarcascade_frontalface_default.xml  # Pre-trained Haar Cascade face detector
+│
 ├── templates/
-│   └── index.html                      # Web interface
+│   └── index.html                       # Web UI — register, start/stop recognition
+│
 ├── static/
-│   ├── styles.css
-│   └── script.js
-└── datasets/                           # Auto-created on first registration
+│   ├── styles.css                       # UI styling
+│   └── script.js                        # Frontend JS — API calls, video stream handling
+│
+├── datasets/                            # Auto-created — stores face samples per user
+│   └── [username]/                      # One folder per registered user
+│       ├── 1.jpg
+│       ├── 2.jpg
+│       └── ...
+│
+├── Live face recognition/               # Standalone live recognition module
+│
+├── .gitignore                           # Excludes __pycache__, venv, face_model.xml
+├── requirements.txt                     # (recommended) pip dependencies
+└── README.md
 
 ---
 
