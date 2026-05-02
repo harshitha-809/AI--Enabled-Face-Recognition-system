@@ -25,6 +25,9 @@ Webcam input → Face detection (Haar Cascade) → LBPH training → Real-time r
 
 ---
 
+## Project Structure
+
+```
 AI--Enabled-Face-Recognition-system/
 │
 ├── app.py                               # Flask app — routes, webcam stream, API endpoints
@@ -42,16 +45,11 @@ AI--Enabled-Face-Recognition-system/
 │
 ├── datasets/                            # Auto-created — stores face samples per user
 │   └── [username]/                      # One folder per registered user
-│       ├── 1.jpg
-│       ├── 2.jpg
-│       └── ...
 │
-├── Live face recognition/               # Standalone live recognition module
-│
-├── .gitignore                           # Excludes __pycache__, venv, face_model.xml
-├── requirements.txt                     # (recommended) pip dependencies
+├── .gitignore
+├── requirements.txt
 └── README.md
-
+```
 ---
 
 ## Setup
